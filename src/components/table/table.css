@@ -1,0 +1,13 @@
+.table {
+    background-color: #141414;
+    margin: auto;
+    margin-top: 30px;
+    width: 30%;
+    padding: 10px;
+    height: 870px;
+    border: 2px solid #222222;
+    border-radius: 10px;
+    overflow-y: scroll;
+
+
+}
