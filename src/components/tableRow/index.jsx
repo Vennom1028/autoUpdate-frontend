@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Group, Switch } from '@mantine/core'
-import { Trash, Download, Check } from 'tabler-icons-react'
+import { Trash, Download } from 'tabler-icons-react'
 import BotsContext from '../../context/bots'
 import { switchStyle } from './styles'
 

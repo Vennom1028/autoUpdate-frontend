@@ -9,7 +9,7 @@ const Table = () => {
 
     return (
         <div className='table'>
-            {selectedBot.versions.length == 0
+            {selectedBot.versions.length === 0
                 ? <h1 className='no-versions'>No Versions Found</h1>
                 : selectedBot.versions.map(version => {
                     return <TableRow key={version.id} version={version.version} id={version.id} enabled={version.enabled} />

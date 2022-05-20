@@ -28,7 +28,7 @@ function SelectBot() {
             transitionDuration={80}
             transitionTimingFunction="ease"
             defaultValue="Tohru"
-            onChange={(value) => { { onChangeHandler(value) } }}
+            onChange={(value) => onChangeHandler(value)}
             styles={selectStyle}
             data={bots.map(bot => { return { value: bot.name, label: bot.name } })}
         />
