@@ -8,9 +8,9 @@ import { theme } from "./theme"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <MantineProvider theme={theme}>
-      <App />
-    </MantineProvider>
-  </React.StrictMode>
+
+  <MantineProvider theme={theme}>
+    <App />
+  </MantineProvider>
+
 );

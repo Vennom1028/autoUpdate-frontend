@@ -1,8 +1,22 @@
 import { Select } from '@mantine/core';
 import { selectStyle } from './styles';
 import { ChevronDown } from 'tabler-icons-react';
+import BotsContext from '../../context/bots';
+import { useContext } from 'react';
 
 function SelectBot() {
+
+    const { bots, setBots, selectedBot, setSelectedBot } = useContext(BotsContext);
+
+    const onChangeHandler = (value) => {
+        bots.forEach(bot => {
+            if (bot.name === value) {
+                console.log(bot)
+                setSelectedBot(bot)
+            }
+        });
+
+    }
     return (
         <Select
             placeholder="Tohru"
@@ -14,10 +28,9 @@ function SelectBot() {
             transitionDuration={80}
             transitionTimingFunction="ease"
             defaultValue="Tohru"
+            onChange={(value) => { { onChangeHandler(value) } }}
             styles={selectStyle}
-            data={[
-                { value: 'Tohru', label: 'Tohru' },
-            ]}
+            data={bots.map(bot => { return { value: bot.name, label: bot.name } })}
         />
     );
 }

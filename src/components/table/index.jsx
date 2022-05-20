@@ -1,43 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import TableRow from '../tableRow'
+import BotsContext from '../../context/bots'
 
 import './table.css'
-const table = () => {
+const Table = () => {
+
+    const { bots, setBots, selectedBot, setSelectedBot } = useContext(BotsContext)
 
     return (
         <div className='table'>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
-            <TableRow></TableRow>
+            {selectedBot.versions.length == 0
+                ? <h1 className='no-versions'>No Versions Found</h1>
+                : selectedBot.versions.map(version => {
+                    return <TableRow key={version.id} version={version.version} id={version.id} enabled={version.enabled} />
+                })
+            }
+
         </div>
     )
 }
 
-export default table
+export default Table

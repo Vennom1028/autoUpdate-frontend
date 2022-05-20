@@ -1,5 +1,7 @@
 export const searchStyle = {
     root: {
-        width: "470px"
-    }
+        width: "470px",
+    },
+
+
 }

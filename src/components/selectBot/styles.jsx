@@ -1,6 +1,6 @@
 export const selectStyle = {
     root: {
-        width: "5%",
+        width: "7%",
     },
     dropdown: {
         cursor: 'pointer',

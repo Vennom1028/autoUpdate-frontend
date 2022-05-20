@@ -13,6 +13,7 @@ const SearchInput = () => {
             styles={searchStyle}
             placeholder="Search Versions"
             rightSectionWidth={42}
+            spellCheck={false}
         />
     )
 }
