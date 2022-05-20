@@ -5,7 +5,7 @@ import BotsContext from '../../context/bots'
 import './table.css'
 const Table = () => {
 
-    const { bots, setBots, selectedBot, setSelectedBot } = useContext(BotsContext)
+    const { selectedBot, } = useContext(BotsContext)
 
     return (
         <div className='table'>

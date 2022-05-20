@@ -6,7 +6,7 @@ import { useContext } from 'react';
 
 function SelectBot() {
 
-    const { bots, setBots, selectedBot, setSelectedBot } = useContext(BotsContext);
+    const { bots, setSelectedBot } = useContext(BotsContext);
 
     const onChangeHandler = (value) => {
         bots.forEach(bot => {

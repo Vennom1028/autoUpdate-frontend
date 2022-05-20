@@ -6,7 +6,7 @@ import { switchStyle } from './styles'
 
 import './tableRow.css'
 const TableRow = ({ id, version, enabled }) => {
-    const { bots, setBots, selectedBot, setSelectedBot, setEnabled } = useContext(BotsContext)
+    const {selectedBot, setSelectedBot, setEnabled } = useContext(BotsContext)
     const setChecked = (value) => {
         const newSelected = { ...selectedBot }
         newSelected.versions.forEach(version => {

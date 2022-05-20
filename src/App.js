@@ -5,7 +5,7 @@ import SelectBot from './components/selectBot';
 import SearchInput from './components/search';
 import { Group } from '@mantine/core'
 import Button from './components/button';
-import { AccessPoint, Plus } from "tabler-icons-react"
+import {  Plus } from "tabler-icons-react"
 import BotsContext from './context/bots';
 import { api } from './services/api';
 
@@ -40,7 +40,7 @@ function App() {
       enabled: value,
       selectedBot: selectedBot.name
     }
-    const response = await api.post("/setEnabled", data)
+    await api.post("/setEnabled", data)
   }
 
   return (
