@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 const devMode = '_self' in React.createElement('div');
-const apiUrl = devMode ? 'http://localhost:5000/api' : 'https://api.royalproxies.io/api';
+const apiUrl = devMode ? 'http://localhost:5000/api' : 'https://api.vensnk.com/api';
 
 axios.interceptors.request.use(
     config => {
